@@ -56,8 +56,8 @@ This project was developed as part of the academic curriculum for artificial int
 Model Benchmark & Evaluation Results
 All models were evaluated on the exact same held-out future test set using time-series validation to ensure zero lookahead data leakage.
   
-Model Architecture	Framework	Hyperparameter Optimization	Test R² Score	Test RMSE (µg/m³)	Status
-HistGradientBoosting	scikit-learn	RandomizedSearchCV	0.9279	23.94	Production Model (.joblib)
+Model Architecture Framework Hyperparameter Optimization Test R² Score	Test RMSE (µg/m³)	Status
+HistGradientBoosting scikit-learn	RandomizedSearchCV	0.9279	23.94	Production Model (.joblib)
 Random Forest	scikit-learn	100 Estimators	0.9248	24.45	Strong Tabular Baseline
 Deep Neural Net (MLP)	PyTorch	Optuna (10 Trials)	0.9178	25.57	Logged to MLflow
 Ridge Regression	scikit-learn	L2 Regularized (𝛼=1.0,	0.9150	26.00)	Linear Baseline
