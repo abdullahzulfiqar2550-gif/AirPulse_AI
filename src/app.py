@@ -1,19 +1,9 @@
-import sys
-import sklearn._loss
-try:
-    from sklearn._loss import _loss as cy_loss
-    sys.modules['_loss'] = cy_loss
-    if hasattr(cy_loss, 'CyHalfSquaredError'):
-        sklearn._loss.CyHalfSquaredError = cy_loss.CyHalfSquaredError
-except Exception:
-    pass
-
 import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
-import os
 import plotly.graph_objects as go
+import os
 
 # 1. Page Configuration
 st.set_page_config(
@@ -26,7 +16,6 @@ st.set_page_config(
 # 2. Model Loading with Caching
 @st.cache_resource
 def load_model():
-    # Check both paths: inside src or in root
     possible_paths = [
         os.path.join("..", "models", "best_pm25_pipeline.joblib"),
         os.path.join("models", "best_pm25_pipeline.joblib"),
