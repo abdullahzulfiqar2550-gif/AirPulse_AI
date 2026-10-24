@@ -1,2 +1,2 @@
 # AirPulse_AI
-AirPulse AI: Real-Time Pakistan PM2.5 Air Quality Forecasting & MLOps System (PyTorch, Optuna, Scikit-Learn, MLflow).. 
+AirPulse_AI: Real-Time Pakistan PM2.5 Air Quality Forecasting & MLOps System (PyTorch, Optuna, Scikit-Learn, MLflow).. 
